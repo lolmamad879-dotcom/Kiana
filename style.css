@@ -16,3 +16,5 @@
   .koala-button{width:120px;height:130px}
   .paper-writing{line-height:1.9}
 }
+.letter-peek{top:12%;height:70%}
+.envelope-3d.opened .letter-peek{transform:translateY(-20px) scale(1)}
