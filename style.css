@@ -18,3 +18,9 @@
 }
 .letter-peek{top:12%;height:70%}
 .envelope-3d.opened .letter-peek{transform:translateY(-20px) scale(1)}
+.letter-card{background:#fffafc}
+.letter-content h1{font-size:clamp(18px,5vw,22px);color:#1a275a}
+.letter-content p{font-size:clamp(16px,4.4vw,18px);font-weight:500;line-height:2.1;color:#1a275a}
+.letter-content .signoff{font-weight:600}
+.card-flower{opacity:.3}
+.letter-koala{width:clamp(70px,20vw,95px);height:clamp(68px,19vw,92px)}
