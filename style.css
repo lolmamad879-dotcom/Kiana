@@ -6,3 +6,13 @@
 @media(min-width:600px){body{padding:18px 0}.app-shell{min-height:calc(100svh - 36px);border-radius:20px;overflow:hidden;background:#ffffff18;box-shadow:0 25px 70px #31518d22;padding:12px 17px 16px}.letter-table{height:420px}.letter-content p{font-size:16px;line-height:2}.letter-card{padding:20px 22px 24px}}
 @media(max-height:700px){.scene{padding-top:9px}.intro-copy{margin-top:0;font-size:20px}.envelope-3d{height:220px}.letter-table{height:315px}.koala-button{width:174px;height:190px}.reveal-scene .tap-hint{margin-top:5px}.letter-card{padding-top:10px}.letter-content p{line-height:1.8;margin:5px 0}}
 @media(prefers-reduced-motion:reduce){*,*:before,*:after{animation-duration:.01ms!important;animation-iteration-count:1!important;scroll-behavior:auto!important;transition-duration:.01ms!important}}
+.letter-table{height:clamp(380px,112vw,480px)}
+.koala-button{top:0;width:clamp(130px,40vw,180px);height:clamp(150px,45vw,200px)}
+.peek-paper{top:34%;height:56%;align-items:flex-start;padding-top:12%}
+.table-pocket{height:30%}
+@media(min-width:600px){.letter-table{height:460px}}
+@media(max-height:700px){
+  .letter-table{height:360px}
+  .koala-button{width:120px;height:130px}
+  .paper-writing{line-height:1.9}
+}
