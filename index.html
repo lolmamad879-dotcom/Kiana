@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#8fc8ff">
+  <title>یه نامه‌ی کوچولو برای کیانا 💗</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="background-art" aria-hidden="true">
+    <div class="sun-glow"></div>
+    <div class="cloud cloud1"></div><div class="cloud cloud2"></div>
+    <div class="branch branch-left">🌸　✿　🌸</div>
+    <div class="branch branch-right">🌸　✿</div>
+    <span class="star star1">✦</span><span class="star star2">♡</span>
+    <span class="star star3">✧</span><span class="star star4">♡</span>
+    <div class="horizon"></div>
+  </div>
+
+  <main class="page">
+    <div class="browser-dots"><i></i><i></i><i></i></div>
+    <div class="top-label">یه نامه‌ی کوچولو برای یه دختر خیلی خاص...</div>
+
+    <!-- First screen: envelope -->
+    <section class="stage envelope-stage" id="envelopeStage">
+      <p class="instruction">برای دیدن نامه کلیک کن ♡</p>
+      <button class="envelope-button" id="openLetter" aria-label="باز کردن نامه" type="button">
+        <div class="envelope" id="envelope">
+          <div class="paper peek-paper">
+            <div class="paper-hearts">♡　✧　♡</div>
+            <p>یه نامه‌ی کوچولو</p>
+            <strong>برای یه دختر خیلی خاص...</strong>
+            <span class="paper-heart">♡</span>
+          </div>
+          <div class="back-pocket"></div>
+          <div class="front-pocket"></div>
+          <div class="flap"></div>
+          <div class="seal">♥</div>
+          <div class="tiny-flower flower-a">✿</div>
+          <div class="tiny-flower flower-b">♡</div>
+          <div class="ribbon"></div>
+        </div>
+      </button>
+    </section>
+
+    <!-- Second screen: letter half out + koala; must click koala to continue -->
+    <section class="stage reveal-stage hidden" id="revealStage">
+      <p class="instruction">یه کوچولو دیگه هم مونده... 🐨</p>
+      <div class="peek-scene">
+        <div class="peek-koala" role="button" tabindex="0" id="koalaButton" aria-label="برای دیدن پیام اصلی روی کوالا کلیک کن">
+          <span class="koala-emoji">🐨</span>
+          <span class="koala-heart heart-a">💗</span>
+          <span class="koala-heart heart-b">♡</span>
+          <span class="koala-spark">✦</span>
+          <span class="koala-hint">روی من کلیک کن ♡</span>
+        </div>
+        <div class="half-letter">
+          <div class="letter-line"></div>
+          <div class="letter-doodle">♡　✿　♡</div>
+          <h1>روز دختر مبارک باشه</h1>
+          <h2>کیانا <span>♡</span></h2>
+          <p>برای تو، با کلی ذوق...</p>
+          <div class="letter-bottom">✧　♡　✧</div>
+        </div>
+        <div class="front-fold"></div>
+      </div>
+      <p class="koala-instruction">تا روی کوالا کلیک نکنی، نامه باز نمی‌شه! 💌</p>
+    </section>
+
+    <!-- Third screen: full message -->
+    <section class="stage message-stage hidden" id="messageStage">
+      <div class="big-koala">
+        <span class="big-koala-emoji">🐨</span>
+        <span class="float-heart fh1">♡</span><span class="float-heart fh2">💗</span>
+        <span class="float-heart fh3">✦</span><span class="float-heart fh4">💕</span>
+      </div>
+      <article class="message-paper">
+        <div class="paper-top">♡　یه نامه فقط برای کیانا　♡</div>
+        <h2>کیانای قشنگم، دختر ناز کپلم،</h2>
+        <p>مهربون‌ترین و خوش‌قلب‌ترین دختر دنیا، روزت مبارک! 🌷</p>
+        <p>تو باعث خوشحالی و دلیلِ دلیلِ تک‌تک ذوق کردن نریمانی؛ تویی که زندگی نریمانو خوشگل و رنگی‌رنگی می‌کنی. لطفاً قدر خودتو بیشتر بدون، همه‌کسم. 💗</p>
+        <p>و درضمن مواظب باش وقتایی که بیرونی پات گیر نکنه به جوب، بیفتی کف زمین؛ چون می‌خوام که سالم باشی. 😭</p>
+        <p class="signoff">دوست دار خیلی خیلی خیلی زیاد شما،<br><strong>نریمان</strong> 💌</p>
+        <div class="paper-bottom">🌸　♡　🌸</div>
+      </article>
+      <button class="restart" id="restart">از اول ببینیم؟ ♡</button>
+    </section>
+
+    <footer>با کلی ذوق و مهر، فقط برای کیانا ✨</footer>
+  </main>
+
+  <script>
+    const envelopeStage = document.getElementById('envelopeStage');
+    const revealStage = document.getElementById('revealStage');
+    const messageStage = document.getElementById('messageStage');
+    const envelope = document.getElementById('envelope');
+    const openLetter = document.getElementById('openLetter');
+    const koalaButton = document.getElementById('koalaButton');
+    const restart = document.getElementById('restart');
+
+    openLetter.addEventListener('click', () => {
+      if (envelope.classList.contains('opened')) return;
+      envelope.classList.add('opened');
+      setTimeout(() => {
+        envelopeStage.classList.add('hidden');
+        revealStage.classList.remove('hidden');
+        window.scrollTo({top: 0, behavior: 'smooth'});
+      }, 750);
+    });
+
+    function revealMessage() {
+      revealStage.classList.add('hidden');
+      messageStage.classList.remove('hidden');
+      window.scrollTo({top: 0, behavior: 'smooth'});
+    }
+    koalaButton.addEventListener('click', revealMessage);
+    koalaButton.addEventListener('keydown', (event) => {
+      if (event.key === 'Enter' || event.key === ' ') {
+        event.preventDefault();
+        revealMessage();
+      }
+    });
+
+    restart.addEventListener('click', () => {
+      messageStage.classList.add('hidden');
+      revealStage.classList.add('hidden');
+      envelopeStage.classList.remove('hidden');
+      envelope.classList.remove('opened');
+      window.scrollTo({top: 0, behavior: 'smooth'});
+    });
+  </script>
+</body>
+</html>
