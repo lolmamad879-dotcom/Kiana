@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#fff0f5">
+  <title>برای کیانا، با کلی مهر 💗</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="glow glow-one"></div>
+  <div class="glow glow-two"></div>
+
+  <main class="card">
+    <div class="top-icon" aria-hidden="true">🌷</div>
+    <p class="eyebrow">یه نامه‌ی کوچیک، برای یه آدم قشنگ</p>
+    <h1>روز دختر مبارک، <span>کیانا</span> جان 💗</h1>
+    <div class="divider"><span>✦</span></div>
+
+    <p class="intro">برای دختری که مهربونی، توی حرف‌ها و رفتارش قشنگه…</p>
+
+    <section class="letter">
+      <p>کیانای عزیزم،</p>
+      <p>
+        شاید نتونم همیشه دقیقاً اون‌طوری که باید، با کلمه‌ها نشون بدم چقدر برام عزیزی؛
+        ولی دلم می‌خواد امروز یادت بندازم که وجودت، مهربونی‌هات و حتی چیزهای کوچیکی
+        که شاید خودت بهشون توجه نکنی، می‌تونن روز آدم رو قشنگ‌تر کنن.
+      </p>
+      <p>
+        امیدوارم همیشه برای خودت همون‌قدر مهربون باشی که برای بقیه‌ای؛
+        به آرزوهات نزدیک‌تر بشی، از ته دل بخندی و روزهایی داشته باشی که
+        توشون احساس آرامش و دوست‌داشتنی‌بودن کنی.
+      </p>
+      <p>
+        این صفحه شاید ساده باشه، اما با فکر تو ساخته شده؛
+        یه یادگاری کوچیک برای گفتنِ یه چیز مهم:
+        <strong>بودنت ارزشمنده و لبخندت قشنگه.</strong>
+      </p>
+      <p class="signoff">روز دختر مبارک، دختر مهربون من 🌸</p>
+    </section>
+
+    <button class="surprise" id="surpriseBtn" type="button">یه پیام کوچولو هم هست… 💌</button>
+    <p class="hidden-message" id="hiddenMessage" aria-live="polite">
+      امیدوارم دنیا همیشه دلیل‌های تازه‌ای برای خندوندنت پیدا کنه؛
+      و یادت نره که لازم نیست هر روز عالی باشی تا دوست‌داشتنی باشی. 💖
+    </p>
+
+    <footer>با کلی مهر، فقط برای تو ✨</footer>
+  </main>
+
+  <div class="floating-heart heart-one">♡</div>
+  <div class="floating-heart heart-two">♡</div>
+  <div class="floating-heart heart-three">♡</div>
+
+  <script>
+    const button = document.getElementById("surpriseBtn");
+    const message = document.getElementById("hiddenMessage");
+
+    button.addEventListener("click", () => {
+      message.classList.toggle("show");
+      button.textContent = message.classList.contains("show")
+        ? "دوباره قایمش کن 🙈"
+        : "یه پیام کوچولو هم هست… 💌";
+    });
+  </script>
+</body>
+</html>
