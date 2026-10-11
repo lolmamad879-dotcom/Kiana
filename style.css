@@ -19,3 +19,7 @@
 .letter-peek{top:12%;height:70%}
 .envelope-3d.opened .letter-peek{transform:translateY(-20px) scale(1)}
 
+.envelope-3d.opened .letter-peek{transform:translateY(-34px) scale(1)}
+.letter-peek{padding-top:34px;gap:6px}
+.letter-peek b,.letter-peek small{font-size:21px;font-weight:800;line-height:1.7;color:#1a275a}
+.letter-peek span{font-size:17px}
